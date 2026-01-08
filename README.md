@@ -20,16 +20,14 @@ spatial features**.
 
 ## 🧩 System Flow (Clear & Visual)
 
-```mermaid
 flowchart TD
-    A[Input Image] --> B[Preprocessing<br/>(Resize, Normalize)]
-    B --> C[CNN Model<br/>(VGG / ResNet / Inception)]
-    C --> D[Convolutional Layers]
-    D --> E[Feature Map Extraction<br/>(64 Channels)]
-    E --> F[Activation Visualization]
-    F --> G[Layer-wise Analysis<br/>(Edges, Textures, Patterns)]
-    G --> H[Interpretability & Insights]
-```
+    A[Input Image] --> B[Preprocessing\nResize, Normalize]
+    B --> C[CNN Model\nVGG16 / ResNet / Inception]
+    C --> D[Convolution Layers]
+    D --> E[Feature Maps\n64 Channels]
+    E --> F[Visualization\nEdges, Textures, Patterns]
+    F --> G[Layer-wise Analysis\nWeights & Biases]
+    G --> H[Metrics Evaluation\nLoss, MSE, R²]
 
 > 📌 This flow illustrates how raw image pixels are progressively transformed into meaningful
 > visual representations across CNN layers.
