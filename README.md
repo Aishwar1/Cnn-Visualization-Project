@@ -1,9 +1,9 @@
 # 🧠 CNN Feature Visualization Tool
 
-This project is a CNN interpretability and feature visualization framework built using TensorFlow.
+This project is a **CNN interpretability and feature visualization framework** built using TensorFlow.
 It analyzes how popular convolutional neural network architectures extract and transform visual
-information across layers, helping understand how CNNs learn edges, textures, and hierarchical
-spatial features.
+information across layers, helping understand how CNNs learn **edges, textures, and hierarchical
+spatial features**.
 
 ---
 
@@ -12,62 +12,73 @@ spatial features.
 - Feature map visualization across convolutional layers
 - Support for pretrained CNN architectures:
   - VGG16
-  - VGG19
   - ResNet
   - Inception
-- Visualization of 64-channel feature maps
-- Analysis of edge, texture, and spatial pattern extraction
-- Layer-wise inspection of weights, biases, and activations
-- TensorBoard integration for performance and feature tracking
+- Visualization of **64-channel feature maps**
+- Layer-wise inspection of **weights, biases, and activations**
+---
+
+## 🧩 System Flow (Clear & Visual)
+
+```mermaid
+flowchart TD
+    A[Input Image] --> B[Preprocessing<br/>(Resize, Normalize)]
+    B --> C[CNN Model<br/>(VGG / ResNet / Inception)]
+    C --> D[Convolutional Layers]
+    D --> E[Feature Map Extraction<br/>(64 Channels)]
+    E --> F[Activation Visualization]
+    F --> G[Layer-wise Analysis<br/>(Edges, Textures, Patterns)]
+    G --> H[Interpretability & Insights]
+```
+
+> 📌 This flow illustrates how raw image pixels are progressively transformed into meaningful
+> visual representations across CNN layers.
 
 ---
 
 ## 🔍 What This Tool Demonstrates
 
-- Progressive transformation of raw pixel data across CNN layers
-- Early-layer edge and gradient detection
-- Deeper-layer texture and semantic feature extraction
-- Effects of pooling, padding, and depth on learned representations
-- Architectural differences between VGG, ResNet, and Inception models
-
----
-
-## 🔄 System Workflow
-
-Input Image  
-→ Convolutional Layers  
-→ Feature Map Extraction  
-→ Activation Visualization  
-→ Layer-wise Analysis  
-→ Interpretation & Comparison  
+- Early CNN layers detecting **edges and gradients**
+- Intermediate layers learning **textures and patterns**
+- Deeper layers capturing **spatial hierarchies**
+- Impact of architectural components such as:
+  - Pooling
+  - Padding
+  - Convolution depth
+- Comparative analysis across **VGG, ResNet, and Inception**
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Python
-- TensorFlow / Keras
-- Pretrained CNN models (VGG16, VGG19, ResNet, Inception)
+- **Python**
+- **TensorFlow / Keras**
+- Pretrained CNN models:
+  - VGG16
+  - ResNet
+  - Inception
 - NumPy, Matplotlib
-- TensorBoard
+- **Visualize**
 
 ---
 
 ## 📊 Metrics & Analysis
 
-- Feature visualization–driven analysis
-- TensorBoard-based monitoring
-- Evaluation using loss trends, pixel-level behavior, R², and MSE metrics where applicable
+- Feature visualization–driven interpretation
+- Analysis using:
+  - Loss trends
+  - Pixel-level behavior
+  - R² and MSE metrics (where applicable)
 
 ---
 
 ## 📂 Project Structure
 
+```
 cnn_feature_visualization/
 │
 ├── models/
 │   ├── vgg16.py
-│   ├── vgg19.py
 │   ├── resnet.py
 │   └── inception.py
 │
@@ -75,31 +86,34 @@ cnn_feature_visualization/
 │   ├── feature_maps.py
 │   └── layer_analysis.py
 │
-├── tensorboard_logs/
 ├── utils/
 │   └── image_processing.py
 │
 ├── main.py
 └── README.md
+```
 
 ---
 
 ## ▶️ How to Run
 
-1. Install dependencies  
-   pip install tensorflow matplotlib numpy
+1️⃣ Install dependencies
+```bash
+pip install tensorflow matplotlib numpy
+```
 
-2. Run the visualization script  
-   python main.py
-
-3. (Optional) Launch TensorBoard  
-   tensorboard --logdir=tensorboard_logs
+2️⃣ Run the visualization script
+```bash
+python main.py
+```
 
 ---
 
 ## 🎯 Project Goals
 
-- Improve interpretability of convolutional neural networks
-- Visualize how architectural choices affect feature learning
+- Improve **interpretability of CNN models**
+- Visualize how **architectural choices affect feature learning**
 - Bridge the gap between CNN theory and real feature behavior
-- Provide an educational tool for CNN inspection
+- Provide a clear, educational tool for CNN inspection
+
+---
